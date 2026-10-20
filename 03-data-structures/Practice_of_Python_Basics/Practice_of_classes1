@@ -1,0 +1,353 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "beb06432",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Snuggles\n",
+      "Snuggles meows!\n",
+      "My Cat Is Persian Breed\n",
+      "CupCake\n",
+      "My CupCake Plays!\n",
+      "My CupCake is 3 Months old \n"
+     ]
+    }
+   ],
+   "source": [
+    "class Cat:\n",
+    "    def __init__(self, name, breed):\n",
+    "        self.name = name\n",
+    "        self.breed = breed\n",
+    "\n",
+    "    def meows(self):\n",
+    "        print(f\"{self.name} meows!\")\n",
+    "        \n",
+    "    def breeds(self):\n",
+    "        print(f\"My Cat Is {self.breed} Breed\")\n",
+    "    \n",
+    "class Kitten(Cat):\n",
+    "    def __init__(self,name,age):\n",
+    "        self.name=name\n",
+    "        self.age=age\n",
+    "    \n",
+    "    def plays(self):\n",
+    "        print(f\"My {self.name} Plays!\")\n",
+    "        \n",
+    "    def aged(self):\n",
+    "        print(f\"My {self.name} is {self.age} old \")\n",
+    "        \n",
+    "my_kitten=Kitten(\"CupCake\",\"3 Months\")\n",
+    "\n",
+    "my_cat = Cat(\"Snuggles\", \"Persian\")\n",
+    "\n",
+    "print(my_cat.name)\n",
+    "my_cat.meows() \n",
+    "my_cat.breeds()\n",
+    "\n",
+    "print(my_kitten.name)\n",
+    "my_kitten.plays()\n",
+    "my_kitten.aged()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "5e1019a4",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "My Name is Shuja\n",
+      "I live in Lahore\n",
+      "My Age is 18\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Person:\n",
+    "    def __init__(self,name,age,city):\n",
+    "        self.name=name\n",
+    "        self.age=age\n",
+    "        self.city=city\n",
+    "    def Name(self):      \n",
+    "        print(f\"My Name is {self.name}\")\n",
+    "    def Age(self):\n",
+    "        print(f\"My Age is {self.age}\")\n",
+    "    def City(self):\n",
+    "        print(f\"I live in {self.city}\")\n",
+    "theperson=Person(\"Shuja\",18,\"Lahore\")\n",
+    "theperson.Name()\n",
+    "theperson.City()\n",
+    "theperson.Age()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "e1e3957b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "My Car is Corolla\n",
+      "My car is Corolla GLI\n",
+      "I bought it in the year 2018\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Car:\n",
+    "    def __init__(self,make,model,year):\n",
+    "        self.make=make\n",
+    "        self.model=model\n",
+    "        self.year=year\n",
+    "    def Make(self):      \n",
+    "        print(f\"My Car is {self.make}\")\n",
+    "    def Model(self):\n",
+    "        print(f\"My car is {self.make} {self.model}\")\n",
+    "    def Year(self):\n",
+    "        print(f\"I bought it in the year {self.year}\")\n",
+    "thecar=Car(\"Corolla\",\"GLI\",2018)\n",
+    "thecar.Make()\n",
+    "thecar.Model()\n",
+    "thecar.Year()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "f6d021cd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The Area is 1661.90\n",
+      "The Circumference is 144.51\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Circle:\n",
+    "    def __init__(self, radius):\n",
+    "        self.radius= radius\n",
+    "        self.pi = 3.14159\n",
+    "    def calculate_area(self):\n",
+    "        Area= self.pi * (self.radius ** 2)\n",
+    "        print(f\"The Area is {Area:.2f}\")\n",
+    "    def calculate_circumference(self):\n",
+    "        Circumference= 2 * self.pi * self.radius\n",
+    "        print(f\"The Circumference is {Circumference:.2f}\")\n",
+    "thesolution=Circle(23)\n",
+    "thesolution.calculate_area()\n",
+    "thesolution.calculate_circumference()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "21cf173c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The area of Rectangle is: 8\n",
+      "The perimeter of Rectangle is: 12\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Rectangle:\n",
+    "    def __init__(self,length,width):\n",
+    "        self.length=length\n",
+    "        self.width=width\n",
+    "\n",
+    "    def calculate_area(self):\n",
+    "        area=self.length*self.width\n",
+    "        print(f\"The area of Rectangle is: {area}\")\n",
+    "\n",
+    "    def calculate_perimeter(self):\n",
+    "        perimeter=2*(self.length+self.width)\n",
+    "        print(f\"The perimeter of Rectangle is: {perimeter}\")\n",
+    "        \n",
+    "thesolutions=Rectangle(4,2)\n",
+    "thesolutions.calculate_area()\n",
+    "thesolutions.calculate_perimeter()\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "39f0ccd9",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Title: The Stranger\n",
+      "Author: Albert Camus\n",
+      "Year: 1942\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Book:\n",
+    "    def __init__(self, title, author, publication_year):\n",
+    "        self.title = title\n",
+    "        self.author = author\n",
+    "        self.publication_year = publication_year\n",
+    "\n",
+    "    def thetitle(self):\n",
+    "        print(f\"Title: {self.title}\")\n",
+    "    def theauthor(self):\n",
+    "        print(f\"Author: {self.author}\")\n",
+    "    def theyear(self):\n",
+    "        print(f\"Year: {self.publication_year}\")\n",
+    "        \n",
+    "thedetails=Book(\"The Stranger\",\"Albert Camus\",1942)\n",
+    "thedetails.thetitle()\n",
+    "thedetails.theauthor()\n",
+    "thedetails.theyear()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "86f30ac7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Circle Area: 50.27\n",
+      "Rectangle Area: 8\n",
+      "Triangle Area: 7.5\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Shape:\n",
+    "    def calculate_area(self):\n",
+    "        print(\"This shape does not have a specific area calculation defined yet.\")\n",
+    "\n",
+    "class Circle(Shape):\n",
+    "    def __init__(self,radius):\n",
+    "        self.radius = radius\n",
+    "        self.pi = 3.14159\n",
+    "    def calculate_area(self):\n",
+    "        area = self.pi*(self.radius ** 2)\n",
+    "        print(f\"Circle Area: {area:.2f}\")\n",
+    "thecircle=Circle(4)\n",
+    "\n",
+    "class Rectangle(Shape):\n",
+    "    def __init__(self,length,width):\n",
+    "        self.length=length\n",
+    "        self.width=width\n",
+    "    def calculate_area(self):\n",
+    "        area=self.length*self.width\n",
+    "        print(f\"Rectangle Area: {area}\")\n",
+    "therectangle=Rectangle(2,4)\n",
+    "\n",
+    "class Triangle(Shape):\n",
+    "    def __init__(self,base,height):\n",
+    "        self.base=base\n",
+    "        self.height=height\n",
+    "    def calculate_area(self):\n",
+    "        area=0.5*self.base*self.height\n",
+    "        print(f\"Triangle Area: {area}\")\n",
+    "thetriangle=Triangle(5,3)\n",
+    "\n",
+    "thecircle.calculate_area()\n",
+    "therectangle.calculate_area()\n",
+    "thetriangle.calculate_area()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "115baba1",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Buddy barks:'Woof!'\n",
+      "Whiskers says 'Meow!'\n",
+      "Bessie says 'Moo!'\n"
+     ]
+    }
+   ],
+   "source": [
+    "class Animal:\n",
+    "    def __init__(self,name,sound=\"Generic sound\"):\n",
+    "        self.name = name\n",
+    "        self.sound = sound\n",
+    "    def make_sound(self):\n",
+    "        print(f\"{self.name} says '{self.sound}'\")\n",
+    "\n",
+    "class Dog(Animal):\n",
+    "    def __init__(self, name):\n",
+    "        self.name=name\n",
+    "        self.sound=\"Woof!\"\n",
+    "    def make_sound(self):\n",
+    "        print(f\"{self.name} barks:'{self.sound}'\")\n",
+    "\n",
+    "class Cat(Animal):\n",
+    "    def __init__(self, name):\n",
+    "        self.name=name\n",
+    "        self.sound=\"Meow!\"\n",
+    "        \n",
+    "class Cow(Animal):\n",
+    "    def __init__(self,name):\n",
+    "        self.name=name\n",
+    "        self.sound=\"Moo!\"\n",
+    "\n",
+    "my_dog=Dog(\"Buddy\")\n",
+    "my_cat=Cat(\"Whiskers\")\n",
+    "my_cow=Cow(\"Bessie\")\n",
+    "\n",
+    "my_dog.make_sound()\n",
+    "my_cat.make_sound()\n",
+    "my_cow.make_sound()\n",
+    "\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.9.12"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
